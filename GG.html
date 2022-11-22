@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>등록정보</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    body {
+      min-height: 100vh;
+
+      background: -webkit-gradient(linear, left bottom, right top, from(#92b5db), to(#1d466c));
+      background: -webkit-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
+      background: -moz-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
+      background: -o-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
+      background: linear-gradient(to top right, #92b5db 0%, #1d466c 100%);
+    }
+
+    .input-form {
+      max-width: 680px;
+
+      margin-top: 80px;
+      padding: 32px;
+
+      background: #fff;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      border-radius: 10px;
+      -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
+    }
+  
+    body {
+            background: linear-gradient(180deg, #FFFCFD 0%, #5c94aa 100%);
+            height: 100vh;}
+
+        .profile {
+            width: 130px;
+            height: 130px;
+            border-radius: 100%;
+            background-size: cover;
+            background-position: center;
+            background-image: url('logo.jpg');}
+            .main {
+            color : #000000;
+            font-size: 22px;
+            size : 20px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        .sub {
+            color : #000000;
+            font-size: 14px;
+            font-weight: 400;
+            size : 14px;
+            margin-top: 0px;
+            margin-bottom: 30px;
+        }
+        .wrap {
+            width: 300px;
+            margin: 30px auto 0px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+ 
+    </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="profile"></div>
+    <h1 class="main">건학기념관 주차등록</h1>
+  <div class="container">
+    <div class="input-form-backgroud row">
+      <div class="input-form col-md-12 mx-auto">
+        <h4 class="mb-3">등록정보</h4>
+        <form class="validation-form" novalidate action = "test1.xlsx">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="name">이름</label>
+              <input type="text" class="form-control" id="name" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                이름을 입력해주세요.
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="nickname">학번</label>
+              <input type="number" class="form-control" id="nickname" placeholder="" value="" required>
+              <div class="invalid-feedback">
+                학번을 입력해주세요.
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="phoneNumber">연락처</label>
+            <input type="phoneNumber" class="form-control" id="phoneNumber" placeholder="010-2536-6804" required>
+            <div class="invalid-feedback">
+              연락처를 입력해주세요.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="carName">차량명</label>
+            <input type="text" class="form-control" id="carName" placeholder="아반떼" required>
+            <div class="invalid-feedback">
+              차량명을 입력해주세요.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="carNumber">차량번호</label>
+            <input type="text" class="form-control" id="carNumber" placeholder="12가 3456" required>
+            <div class="invalid-feedback">
+              차량번호를 입력해주세요.
+            </div>
+          </div>
+          <hr class="mb-4">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="aggrement" required>
+            <label class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="aggrement01" required>
+              <label class="custom-control-label" for="aggrement01">건학기념관 주차등록을 신청합니다.</label>
+              </div>
+          <div class="mb-4"></div>
+          <button class="btn btn-primary btn-lg btn-block" type="submit" value = "전송">신청</button>
+        </form>
+      </div>
+    </div>
+    <footer class="my-3 text-center text-small">
+    </footer>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      const forms = document.getElementsByClassName('validation-form');
+
+      Array.prototype.filter.call(forms, (form) => {
+        form.addEventListener('submit', function (event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+
+          form.classList.add('was-validated');
+        }, false);
+      });
+    }, false);
+  </script>
+          <p class="tag">(48434)부산 남구 수영로 309(대연동)</p>
+          <p class="tag1">TEl : 051-663-5701</p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 제출을 누르면 action에 지정한 경로로 간다 -->
+   <form action="action.jsp" method="get">
+       <!-- get : 도메인쪽에 내가 입력한 것이 붙어서 서버쪽으로 가는 것 -->
+       <!-- post: 정보은닉이 되어 서버쪽으로 가는 것 -->
+       이름: <input type="text" name="uname"><br>
+       아이디: <input type="text" name="uid"><br>
+       비밀번호: <input type="password" name ="upw"><br>
+       연락처: <input type="text" name="uphone1" size="5">-
+       <input type="text" name="uphone2" size="5">-<input type="text" name="uphone3" size="5">
+       사진: <input type="file" name="upic"><br>
+       성별구분: <input type="radio" name="gender" value="m">남,
+       <input type="radio" name="gender" value="w">여<br>
+       <!-- checkbox는 name이 같아야함 -->
+       <!-- 여러개 선택할 수 있음 -->
+       사용언어: <input type="checkbox" name="lan" value="kor" checked="checked">한글,
+       <input type="checkbox" name="lan" value="eng" >영어,
+       <input type="checkbox" name="lan" value="jap" >일본어, 
+       <input type="checkbox" name="lan" value="chi" >중국어<br>
+       
+       자기소개: <textarea name="" id="" cols="30" rows="10">간단하게 입력하세요</textarea>
+       국적: <select>
+           <option value="">korea</option>
+           <option value="">usa</option>
+           <option value="">japan</option>
+           <option value="">china</option>
+ 
+       </select><br>
+       좋아하는 음식: <select multiple="multiple">
+           <option value="">김치</option>
+           <option value="">불고기</option>
+           <option value="">파전</option>
+           <option value="">비빔밥</option>
+       </select><br>
+       <input type="submit">
+ 
+   </form>
+</body>
+</html>

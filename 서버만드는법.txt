@@ -1,0 +1,5 @@
+xampp 다중 플랫폼(맥 윈도우 다가능)
+
+laragon
+	apache 는 서버
+	MySQL 는 
